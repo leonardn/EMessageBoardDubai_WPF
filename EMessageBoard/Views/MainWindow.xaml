@@ -1,0 +1,23 @@
+﻿<Window xmlns:Views="clr-namespace:EMessageBoard.Views"  x:Class="EMessageBoard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="E-Message Board"
+        Height="{Binding SystemParameters.PrimaryScreenHeight}" 
+        Width="{Binding SystemParameters.PrimaryScreenWidth}" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="146" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <UniformGrid Grid.Row="0">
+            <Image x:Name="headerImg" Source="/EMessageBoard;component/Resources/images/header.png" Stretch="UniformToFill" />
+        </UniformGrid>
+        
+        <Canvas x:Name="canvasContent" Grid.Row="1">
+            <Views:WriteModeBoard />
+        </Canvas>
+        
+        
+    </Grid>
+</Window>
