@@ -1,1 +1,1 @@
-# EMessageBoardDubai_WPF
+# Dubai Digital Signage WPF
